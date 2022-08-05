@@ -4,5 +4,26 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.mybatis.mapper.UserMapper">
+    <!--User getUserByUsername(String username);-->
+    <select id="getUserByUsername" resultType="User">
+        select * from t_user where username=#{username}
+        /*select * from t_user where username='${username}'*/
+    </select>
 
+    <!--User checklogin(String username,String password);-->
+    <select id="checklogin" resultType="User">
+        <!-- /*select * from t_user where username = #{arg0} and password = #{arg1}*/-->
+        select * from t_user where username = #{param1} and password = #{param2}
+    </select>
+
+    <!--User checkloginByMap(String username,String password);-->
+    <select id="checkloginByMap" resultType="User">
+        <!-- /*select * from t_user where username = #{arg0} and password = #{arg1}*/-->
+        select * from t_user where username = #{username} and password = #{password}
+    </select>
+
+    <!--void insertUesr(User user);-->
+    <insert id="insertUesr">
+        insert into t_user values(null,#{username},#{password},#{age},#{gender},#{email});
+    </insert>
 </mapper>

@@ -18,7 +18,7 @@ public class User {
         this.age = age;
         this.gender = gender;
         this.email = email;
-        System.out.println("有参构造方法");
+        //System.out.println("有参构造方法");
     }
 
     public Integer getId() {
@@ -27,7 +27,7 @@ public class User {
 
     public void setId(Integer id) {
         this.id = id;
-        System.out.println("set方法");
+        //System.out.println("set方法");
     }
 
     public String getUsername() {

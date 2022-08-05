@@ -36,12 +36,16 @@ public class MybatisTest {
          * 代理模式
          * 自动创建实例对象，执行sql语句
          *
-         * 底层的实现原理
-         * 提供sql以及唯一的标识找到sql并执行，唯一标识是namespace.sqlId
-         * int result = sqlSession.insert("com.mybatis.mapper.UserMapper.insertUser");
+         * 创建接口的实现类(代理实现类对象)，然后将实现类的对象进行返回
          */
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         //调用mapper接口中的方法，实现添加用户信息的功能
+        /*
+         * 底层的实现原理
+         * 在实现类中重写接口的方法
+         * 根据唯一的标识找到sql并执行，唯一标识是namespace.sqlId
+         * int result = sqlSession.insert("com.mybatis.mapper.UserMapper.insertUser");
+         */
         int result = mapper.insertUser();
         System.out.println(result);
         //提交事务
