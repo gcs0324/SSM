@@ -26,4 +26,9 @@
     <insert id="insertUesr">
         insert into t_user values(null,#{username},#{password},#{age},#{gender},#{email});
     </insert>
+
+    <!--User checkloginByParam(@Param("username") String username, @Param("password") String password);-->
+    <select id="checkloginByParam" resultType="User">
+        select * from t_user where username = #{username} and password = #{password};
+    </select>
 </mapper>

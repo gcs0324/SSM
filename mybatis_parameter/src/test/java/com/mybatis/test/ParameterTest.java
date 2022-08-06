@@ -48,4 +48,13 @@ public class ParameterTest {
         mapper.insertUesr(new User(null,"root","123456",33,"女","123@qq.com"));
         sqlSession.close();
     }
+
+    @Test
+    public void testCheckLoginByParam(){
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        User user = mapper.checkloginByParam("admin","123456");
+        sqlSession.close();
+        System.out.println(user);
+    }
 }
