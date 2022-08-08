@@ -1,10 +1,14 @@
 package com.mybatis.pojo;
 
+import java.util.List;
+
 public class Dept {
 
     private Integer deptId;
 
     private String deptName;
+
+    private List<Emp> emps;
 
     public Dept() {
     }
@@ -12,6 +16,14 @@ public class Dept {
     public Dept(Integer deptId, String deptName) {
         this.deptId = deptId;
         this.deptName = deptName;
+    }
+
+    public List<Emp> getEmps() {
+        return emps;
+    }
+
+    public void setEmps(List<Emp> emps) {
+        this.emps = emps;
     }
 
     public Integer getDeptId() {
@@ -35,6 +47,7 @@ public class Dept {
         return "Dept{" +
                 "deptId=" + deptId +
                 ", deptName='" + deptName + '\'' +
+                ", emps=" + emps +
                 '}';
     }
 }
