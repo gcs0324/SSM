@@ -36,7 +36,7 @@
         <result column="gender" property="gender"/>
     </resultMap>
 
-    <select id="getEmpByEmpId"  resultMap="empResultMap">
+    <select id="getEmpByEmpId" resultType="emp">
         select * from t_emp where emp_id = #{empId}
     </select>
 

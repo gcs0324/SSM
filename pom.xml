@@ -12,6 +12,9 @@
         <module>mybatis_helloworld</module>
         <module>mybatis_parameter</module>
         <module>mybatis_resultMap</module>
+        <module>mybatis_dynamicSQL</module>
+        <module>mybatis_cache</module>
+        <module>mybatis_mbg</module>
     </modules>
     <name>SSM</name>
 
