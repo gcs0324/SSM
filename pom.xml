@@ -15,6 +15,10 @@
         <module>mybatis_dynamicSQL</module>
         <module>mybatis_cache</module>
         <module>mybatis_mbg</module>
+        <module>spring_helloworld</module>
+        <module>spring_ioc_xml</module>
+        <module>spring_ioc_annotation</module>
+        <module>spring_proxy</module>
     </modules>
     <name>SSM</name>
 
