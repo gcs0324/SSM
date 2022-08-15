@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class AOPTest {
+public class AOPByAnnotationTest {
     /**
      * 在ioc容器中无法获取目标对象，只能获取代理对象
      */
