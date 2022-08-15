@@ -20,6 +20,7 @@
         <module>spring_ioc_annotation</module>
         <module>spring_proxy</module>
         <module>spring-aop</module>
+        <module>spring-transaction</module>
     </modules>
     <name>SSM</name>
 
