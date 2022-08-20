@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -22,5 +21,11 @@ public class JdbcTemplateTest {
     public void testInsert(){
         String sql = "insert into t_user values(null,?,?,?,?,?)";
         jdbcTemplate.update(sql,"root","123",23,"女","123@qq.com");
+    }
+
+    @Test
+    public void testGetUserById(){
+        String sql = "select * from t_user where id = ?";
+        //白学
     }
 }

@@ -21,6 +21,10 @@
         <module>spring_proxy</module>
         <module>spring-aop</module>
         <module>spring-transaction</module>
+        <module>spring_mvc_helloworld</module>
+        <module>spring_mvc_demo</module>
+        <module>spring_mvc_rest</module>
+        <module>spring_mvc_ajax</module>
     </modules>
     <name>SSM</name>
 
@@ -49,6 +53,11 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+            </plugin>
         </plugins>
     </build>
 </project>
